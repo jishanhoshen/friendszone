@@ -1,0 +1,5 @@
+[01-Mar-2022 17:55:11 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/dreamcre/chatapp.dream-creators.com/chat.php on line 18
+[01-Mar-2022 17:55:16 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/dreamcre/chatapp.dream-creators.com/chat.php on line 18
+[01-Mar-2022 17:55:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/dreamcre/chatapp.dream-creators.com/chat.php on line 18
+[01-Mar-2022 17:55:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/dreamcre/chatapp.dream-creators.com/chat.php on line 18
+[01-Mar-2022 17:55:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/dreamcre/chatapp.dream-creators.com/chat.php on line 18
