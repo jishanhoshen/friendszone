@@ -37,12 +37,17 @@ include_once "header.php";
             <div class="login-area">
                 <div class="logo"><img src="public/images/icons/logo.svg" alt=""></div>
                 <div class="c-name">friends zone</div>
-                <div class="login-header">Login</div>
+                <div class="login-header">Sign in</div>
                 <div class="error"></div>
                 <form class="login-form" method="post">
                     <input type="text" name="email" placeholder="Email" autofocus>
                     <button class="loginbutton">Next</button>
                 </form>
+
+                <div class="createlink">
+                New to GitHub? 
+                    <a href="/signup.php">Create an account.</a>
+                </div>
             </div>
         <?php
         }

@@ -1,17 +1,18 @@
 <?php
     session_start();
     include_once "config.php";
-    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
-    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
-    $birthdate = mysqli_real_escape_string($conn, $_POST['birthdate']);
-    $gender = mysqli_real_escape_string($conn, $_POST['gender']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
-    if(!empty($fname) && !empty($lname) && !empty($birthdate) && !empty($gender) && !empty($email) && !empty($password)){
+    $returnData = [];
+    if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['birthdate']) && !empty($_POST['gender']) && !empty( $_POST['email']) && !empty($_POST['password'])){
+        $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+        $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+        $birthdate = mysqli_real_escape_string($conn, $_POST['birthdate']);
+        $gender = mysqli_real_escape_string($conn, $_POST['gender']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
             if(mysqli_num_rows($sql) > 0){
-                echo "$email - This email already exist!";
+                $returnData['error'] = $email . "<br> This email already exist!";
             }else{
                 if(isset($_FILES['image'])){
                     $img_name = $_FILES['image']['name'];
@@ -25,40 +26,38 @@
                     if(in_array($img_ext, $extensions) === true){
                         $types = ["image/jpeg", "image/jpg", "image/png"];
                         if(in_array($img_type, $types) === true){
-                            $time = time();
-                            $new_img_name = $time.$img_name;
-                            if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
-                                $ran_id = rand(time(), 100000000);
+                            $ran_id = rand(time(), 100000000);
+                            $new_img_name = $fname.$lname.$ran_id.".".$img_ext;
+                            $returnData['test'] = $new_img_name;
+                            if(move_uploaded_file($tmp_name,"../public/images/users/".$new_img_name)){
                                 $status = "Active now";
                                 $encrypt_pass = md5($password);
                                 $sql = "INSERT INTO users (unique_id, fname, lname, email, password, img, gender, birthdate, status)
                                 VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$gender}', '{$birthdate}', '{$status}')";
-                                $insert_query = mysqli_query($conn, $sql);
-                                if($insert_query){
-                                    $select_sql2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
-                                    if(mysqli_num_rows($select_sql2) > 0){
-                                        $result = mysqli_fetch_assoc($select_sql2);
-                                        $_SESSION['unique_id'] = $result['unique_id'];
-                                        echo "success";
-                                    }else{
-                                        echo "This email address not Exist!";
-                                    }
+                                $result = $conn->query($sql);
+                                if($result){
+                                    $_SESSION['unique_id'] = $ran_id;
+                                    $returnData['success'] = "success";
                                 }else{
-                                    echo "Something went wrong. Please try again!";
+                                    $returnData['error'] = "Something went wrong. Please try again!";
                                 }
                             }
                         }else{
-                            echo "Please upload an image file - jpeg, png, jpg";
+                            $returnData['error'] = "Please upload an image file - jpeg, png, jpg";
                         }
                     }else{
-                        echo "Please upload an image file - jpeg, png, jpg";
+                        $returnData['error'] = "Please upload an image file - jpeg, png, jpg";
                     }
+                }else{
+                    $returnData['error'] = "All input fields are required!2";
                 }
             }
         }else{
-            echo "$email is not a valid email!";
+            $returnData['error'] = $email . "is not a valid email!";
         }
     }else{
-        echo "All input fields are required!";
+        $returnData['error'] = "All input fields are required!1";
     }
-?>
+    $returnData['files'] = $_FILES;
+    $returnData['post'] = $_POST;
+echo json_encode($returnData);
