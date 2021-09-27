@@ -28,9 +28,7 @@ if (!isset($_SESSION['unique_id'])) {
             <p><?php echo $row['status']; ?></p>
           </div>
         </header>
-        <div class="chat-box">
-
-        </div>
+        <div class="chat-box"><div class="progress">loading...</div></div>
         <form action="#" class="typing-area">
           <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
           <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">

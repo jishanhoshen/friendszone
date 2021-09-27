@@ -33,7 +33,7 @@ if (!isset($_SESSION['unique_id'])) {
                 <input type="text" placeholder="Enter name to search...">
                 <button id="searchbtn"><i class="fas fa-search"></i></button>
             </div>
-            <div class="users-list"></div>
+            <div class="users-list"><div class="progress">loading...</div></div>
         </section>
     </div>
     <script src="public/js/jquery-3.6.0.min.js"></script>

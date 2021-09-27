@@ -423,3 +423,12 @@ a {
 
     padding: 0px 3px;
 }
+.progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40vh;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
