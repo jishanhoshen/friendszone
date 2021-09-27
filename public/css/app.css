@@ -203,7 +203,19 @@ a {
 :is(.users, .users-list) .details span {
     font-size: 18px;
     font-weight: 500;
+    text-transform: capitalize;
 }
+:is(.users, .users-list) .nofriends {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20vh;
+}
+
 .users header .logout {
     display: block;
     background: #333;
@@ -223,7 +235,7 @@ a {
     justify-content: space-between;
 }
 .users .search .text {
-    font-size: 18px;
+    font-size: 16px;
 }
 .users .search input {
     position: absolute;
@@ -264,7 +276,7 @@ a {
     content: "\f00d";
 }
 .users-list {
-    max-height: 350px;
+    max-height: calc(100vh - (25px + 71px + 82px));
     overflow-y: auto;
 }
 :is(.users-list, .chat-box)::-webkit-scrollbar {
@@ -314,6 +326,7 @@ a {
 .chat-area header .details span {
     font-size: 17px;
     font-weight: 500;
+    text-transform: capitalize;
 }
 .chat-box {
     position: relative;

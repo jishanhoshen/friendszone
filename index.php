@@ -29,13 +29,11 @@ if (!isset($_SESSION['unique_id'])) {
                 <a href="logout.php?session=true" class="logout">Logout</a>
             </header>
             <div class="search">
-                <label class="text" for="searchbtn">Select an user to start chat</label>
+                <label class="text" for="searchbtn">Search Friend to start hang out</label>
                 <input type="text" placeholder="Enter name to search...">
                 <button id="searchbtn"><i class="fas fa-search"></i></button>
             </div>
-            <div class="users-list">
-
-            </div>
+            <div class="users-list"></div>
         </section>
     </div>
     <script src="public/js/jquery-3.6.0.min.js"></script>

@@ -1,9 +1,15 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FriendsZone</title>
-    <link rel="shortcut icon" href="public/images/icons/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="public/css/app.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url"                content="https://app.dream-creators.com/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Friends Zone | Lets fun with friends" />
+    <meta property="og:description"        content="FriendsZone is a chatting app, Where you can hang out with your friends." />
+    <meta property="og:image"              content="https://app.dream-creators.com/public/images/icons/chat.jpg" />
+    <meta property="og:image:alt"          content="Friends Zone, Lets fun with friends"/>
+    <title>FriendsZone</title>
+    <link rel="shortcut icon" href="public/images/icons/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="public/css/app.css">
 </head>

@@ -45,7 +45,7 @@ include_once "header.php";
                 </form>
 
                 <div class="createlink">
-                New to GitHub? 
+                New to FriendsZone?
                     <a href="/signup.php">Create an account.</a>
                 </div>
             </div>
