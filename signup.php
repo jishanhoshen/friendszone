@@ -11,7 +11,7 @@ include_once "header.php";
 <body>
     <div class="main-container">
         <div class="login-area">
-            <div class="logo"><img src="public/images/icons/logo.svg" alt=""></div>
+            <div class="logo"><img src="assets/images/icons/logo.svg" alt=""></div>
             <div class="c-name">friends zone</div>
             <div class="login-header">Sign Up</div>
             <div class="error"></div>
@@ -36,8 +36,8 @@ include_once "header.php";
             <div class="createlink">Already have an account? <a href="/login.php">Sign in →</a></div>
         </div>
     </div>
-    <script src="public/js/jquery-3.6.0.min.js"></script>
-    <script src="public/js/signup.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/signup.js"></script>
     <script>
         $('input#photo').change(function() {
             var vidFileLength = $(this)[0].files.length;

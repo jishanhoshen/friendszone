@@ -20,7 +20,7 @@ if (!isset($_SESSION['unique_id'])) {
                         $row = mysqli_fetch_assoc($sql);
                     }
                     ?>
-                    <img src="public/images/users/<?php echo $row['img']; ?>" alt="">
+                    <img src="assets/images/users/<?php echo $row['img']; ?>" alt="">
                     <div class="details">
                         <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
                         <p><?php echo $row['status']; ?></p>
@@ -36,8 +36,8 @@ if (!isset($_SESSION['unique_id'])) {
             <div class="users-list"><div class="progress">loading...</div></div>
         </section>
     </div>
-    <script src="public/js/jquery-3.6.0.min.js"></script>
-    <script src="public/js/users.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/users.js"></script>
 </body>
 
 </html>

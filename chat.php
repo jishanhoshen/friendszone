@@ -22,7 +22,7 @@ if (!isset($_SESSION['unique_id'])) {
           }
           ?>
           <a href="/" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-          <img src="public/images/users/<?php echo $row['img']; ?>" alt="">
+          <img src="assets/images/users/<?php echo $row['img']; ?>" alt="">
           <div class="details">
             <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
             <p><?php echo $row['status']; ?></p>
@@ -37,7 +37,7 @@ if (!isset($_SESSION['unique_id'])) {
       </section>
     </div>
   </div>
-  <script src="public/js/chat.js"></script>
+  <script src="assets/js/chat.js"></script>
 
 </body>
 
