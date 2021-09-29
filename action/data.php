@@ -58,7 +58,7 @@ for ($k = 0; $k < count($shortData); $k++) {
     ($shortData[$k]['status'] == "Offline now") ? $offline = "offline" : $offline = "";
     $output .= '<a href="chat.php?user_id=' . $shortData[$k]['friend'] . '">
                 <div class="content">
-                <img src="../public/images/users/' . $shortData[$k]['img'] . '" alt="">
+                <img src="../assets/images/users/' . $shortData[$k]['img'] . '" alt="">
                 <div class="details">
                     <span>' . $shortData[$k]['fname'] . " " . $shortData[$k]['lname'] . '</span>
                     <p>' . $you . $shortData[$k]['msg'] . '</p>
