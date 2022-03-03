@@ -16,22 +16,22 @@ include_once "header.php";
             <div class="login-header">Sign Up</div>
             <div class="error"></div>
             <form class="login-form" method="post" enctype="multipart/form-data">
-                <input type="text" name="fname" placeholder="First Name">
-                <input type="text" name="lname" placeholder="Last Name">
-                <input type="text" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <select name="gender">
+                <input type="text" name="fname" placeholder="First Name" required>
+                <input type="text" name="lname" placeholder="Last Name" required>
+                <input type="text" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <select name="gender" required>
                     <option value="" selected disabled>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Others</option>
                 </select>
-                <input type="date" name="birthdate">
+                <input type="date" name="birthdate" required>
                 <div class="fileupload">
                     <label for="photo"><span id="photoname">Choose Photo</span><i class="fas fa-upload"></i></label>
-                    <input type="file" name="image" id="photo">
+                    <input type="file" name="image" id="photo" required>
                 </div>
-                <button class="loginbutton">Next</button>
+                <input type="submit" class="loginbutton" value="next">
             </form>
             <div class="createlink">Already have an account? <a href="/login.php">Sign in →</a></div>
         </div>

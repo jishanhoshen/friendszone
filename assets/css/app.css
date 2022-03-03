@@ -122,7 +122,7 @@ form.login-form {
     border: 0;
     appearance: none;
 }
-.login-form button {
+.login-form input[type=submit] {
     width: 298px;
     height: 40px;
     font-family: Roboto;
@@ -133,6 +133,8 @@ form.login-form {
     /* identical to box height */
 
     text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
 
     color: #ffffff;
     margin: auto;

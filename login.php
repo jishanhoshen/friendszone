@@ -25,7 +25,7 @@ include_once "header.php";
                 <div class="error"></div>
                 <form class="login-form" method="post">
                     <input type="password" name="password" placeholder="Password" autofocus>
-                    <button>Continue</button>
+                    <input type="submit" class="loginbutton" value="Continue">
                 </form>
 
                 <a href="/logout.php" class="loginanother">Logoin Another Account !</a>
@@ -41,7 +41,7 @@ include_once "header.php";
                 <div class="error"></div>
                 <form class="login-form" method="post">
                     <input type="text" name="email" placeholder="Email" autofocus>
-                    <button class="loginbutton">Next</button>
+                    <input type="submit" class="loginbutton" value="next">
                 </form>
 
                 <div class="createlink">

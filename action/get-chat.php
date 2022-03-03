@@ -19,7 +19,7 @@
                                 </div>';
                 }else{
                     $output .= '<div class="chat incoming">
-                                <img src="public/images/users/'.$row['img'].'" alt="">
+                                <img src="assets/images/users/'.$row['img'].'" alt="">
                                 <div class="details">
                                     <p>'. $row['msg'] .'</p>
                                 </div>

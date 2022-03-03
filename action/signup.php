@@ -8,7 +8,7 @@
         $birthdate = mysqli_real_escape_string($conn, $_POST['birthdate']);
         $gender = mysqli_real_escape_string($conn, $_POST['gender']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $password =  mysqli_real_escape_string($conn, $_POST['password']);
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
             if(mysqli_num_rows($sql) > 0){
@@ -29,7 +29,7 @@
                             $ran_id = rand(time(), 100000000);
                             $new_img_name = $fname.$lname.$ran_id.".".$img_ext;
                             $returnData['test'] = $new_img_name;
-                            if(move_uploaded_file($tmp_name,"../public/images/users/".$new_img_name)){
+                            if(move_uploaded_file($tmp_name,"../assets/images/users/".$new_img_name)){
                                 $status = "Active now";
                                 $encrypt_pass = md5($password);
                                 $sql = "INSERT INTO users (unique_id, fname, lname, email, password, img, gender, birthdate, status)
